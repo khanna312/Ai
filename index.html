@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARVIS AI Assistant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0a192f;
+            color: #ccd6f6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            text-align: center;
+            max-width: 800px;
+            padding: 2rem;
+        }
+        .logo {
+            width: 150px;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            color: #64ffda;
+            margin-bottom: 0.5rem;
+        }
+        .tagline {
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+        }
+        .command-box {
+            background-color: #112240;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .command {
+            display: inline-block;
+            background-color: #233554;
+            color: #64ffda;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            margin: 0.5rem;
+            font-family: monospace;
+        }
+        .btn {
+            background-color: #64ffda;
+            color: #0a192f;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin: 0.5rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #52d3b8;
+        }
+        .versions {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .version-card {
+            background-color: #112240;
+            border-radius: 8px;
+            padding: 1.5rem;
+            width: 45%;
+        }
+        .version-card h3 {
+            color: #64ffda;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://i.imgur.com/JqYeZLn.png" alt="JARVIS Logo" class="logo">
+        <h1>JARVIS AI VOICE ASSISTANT</h1>
+        <p class="tagline">Your personal artificial intelligence assistant</p>
+        
+        <div class="command-box">
+            <p>Try these commands:</p>
+            <div>
+                <span class="command">"AI assistant offline download"</span>
+                <span class="command">"Open settings"</span>
+                <span class="command">"Send message"</span>
+                <span class="command">"System info"</span>
+            </div>
+        </div>
+        
+        <button class="btn" id="voiceBtn">
+            <i class="fas fa-microphone"></i> Voice Command
+        </button>
+        <button class="btn" id="textBtn">
+            <i class="fas fa-keyboard"></i> Text Input
+        </button>
+        
+        <div class="versions">
+            <div class="version-card">
+                <h3>Android Version</h3>
+                <p>Full system access control</p>
+                <button class="btn">Download APK</button>
+            </div>
+            <div class="version-card">
+                <h3>Termux Version</h3>
+                <p>Full knowledge terminal access</p>
+                <button class="btn">Install Script</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('voiceBtn').addEventListener('click', () => {
+            alert('Voice command feature will be activated');
+            // Add your voice recognition logic here
+        });
+        
+        document.getElementById('textBtn').addEventListener('click', () => {
+            const command = prompt('Enter your command for JARVIS:');
+            if (command) {
+                alert(`Processing command: ${command}`);
+                // Add your command processing logic here
+            }
+        });
+    </script>
+</body>
+</html>
